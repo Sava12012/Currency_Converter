@@ -42,6 +42,7 @@ yarn-error.log*
 
 # OS generated files
 .DS_Store
+.DS_Store?
 .AppleDouble
 .LSOverride
 __MACOSX/
@@ -90,3 +91,7 @@ dwsync.xml
 .flutter-plugins
 .flutter-plugins-dependencies
 .flutter-plugins-version
+
+# Angular
+.angular
+/angular.json

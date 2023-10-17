@@ -50,4 +50,30 @@ export class CurrencyConverterComponent implements OnInit {
         baseAmount * this.exchangeRates.rates[this.toCurrency];
     }
   }
+
+  onConvertedAmountChange(): void {
+    if (
+      this.exchangeRates &&
+      this.fromCurrency &&
+      this.toCurrency &&
+      this.convertedAmount
+    ) {
+      let baseAmount: number;
+
+      if (this.toCurrency === 'base') {
+        // If the "toCurrency" is the base currency, simply use the entered amount
+        baseAmount = this.convertedAmount;
+      } else if (this.fromCurrency === 'base') {
+        // If the "fromCurrency" is the base currency, use the inverse of the entered amount
+        baseAmount = this.convertedAmount / this.exchangeRates.rates[this.toCurrency];
+      } else {
+        // If neither the "fromCurrency" nor "toCurrency" is the base currency, first convert to the base currency
+        baseAmount = this.convertedAmount / this.exchangeRates.rates[this.toCurrency];
+      }
+
+      // Convert the base amount to the "fromCurrency"
+      this.amount =
+        baseAmount * this.exchangeRates.rates[this.fromCurrency];
+    }
+  }
 }
