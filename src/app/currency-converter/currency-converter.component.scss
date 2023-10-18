@@ -3,14 +3,26 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 30rem;
+}
+
+.title {
+  font-size: 3.1rem;
+  margin-bottom: 2rem;
+  color: #3c3c3c;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .fromWrapper {
   display: flex;
   gap: 1rem;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
 }
 
 .currencyWrapper {
   display: flex;
   gap: 1rem;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
 }

@@ -1,7 +1,13 @@
 <mat-toolbar color="primary">
-  <span>Currency Converter</span>
+  <span class="headerText">Currency Converter</span>
   <span class="fill-space"></span>
-  <app-clock />
-  <span>USD: {{ currencyRates.rates.USD | number:'1.2-2' }}</span> <!-- Виводимо курс USD -->
-  <span>EUR: {{ currencyRates.rates.EUR | number:'1.2-2' }}</span> <!-- Виводимо курс EUR -->
+  <div class="headerWrapper">
+    <app-clock />
+    <div class="currencyRateWrapper">
+      <span class="rateUSD">USD: {{ currencyRates.rates.USD | number:'1.2-2' }}</span>
+      <span class="rateEUR">EUR: {{ currencyRates.rates.EUR | number:'1.2-2' }}</span>
+    </div>
+
+  </div>
+
 </mat-toolbar>
