@@ -26,3 +26,25 @@
   gap: 1rem;
   text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
 }
+
+/* Media queries for mobile devices */
+@media (max-width: 768px) {
+  .headerText {
+    flex-direction: column;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+  .converterWrapper {
+    height: auto;
+  }
+}
+
+/* Media queries for mobile devices */
+@media (max-width: 450px) {
+  .converterWrapper {
+    display: block;
+    flex-direction: column;
+  }
+}
