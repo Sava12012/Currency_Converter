@@ -17,7 +17,7 @@ export class CurrencyRatesService {
 
   getInvertedCurrencyRates(): Observable<any> {
     return this.http.get(this.apiUrl).pipe(
-      map((data: any) => { // додайте ": any" після "data"
+      map((data: any) => {
         const rates = data.rates;
         const invertedRates: any = {};
         for (const currency in rates) {
