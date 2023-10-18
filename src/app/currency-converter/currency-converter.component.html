@@ -1,30 +1,34 @@
-<div style="display: flex">
-  <mat-form-field appearance="outline">
-    <mat-label>Amount</mat-label>
-    <input matInput [(ngModel)]="amount" (ngModelChange)="onAmountChange()" />
-  </mat-form-field>
+<div class="converterWrapper">
+  <div class="fromWrapper">
+    <mat-form-field appearance="outline">
+      <mat-label>Amount</mat-label>
+      <input matInput [(ngModel)]="amount" (ngModelChange)="onAmountChange()" />
+    </mat-form-field>
 
-  <mat-form-field appearance="outline">
-    <mat-label>From Currency</mat-label>
-    <mat-select [(ngModel)]="fromCurrency" (ngModelChange)="onAmountChange()">
-      <!-- Populate options based on available currencies -->
-      <mat-option *ngFor="let currency of exchangeRates.rates | keyvalue" [value]="currency.key">{{ currency.key
-        }}</mat-option>
-    </mat-select>
-  </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>From Currency</mat-label>
+      <mat-select [(ngModel)]="fromCurrency" (ngModelChange)="onAmountChange()">
+
+        <mat-option *ngFor="let currency of exchangeRates.rates | keyvalue" [value]="currency.key">{{ currency.key
+          }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="currencyWrapper">
+    <mat-form-field appearance="outline">
+      <mat-label>To Currency</mat-label>
+      <mat-select [(ngModel)]="toCurrency" (ngModelChange)="onAmountChange()">
+
+        <mat-option *ngFor="let currency of exchangeRates.rates | keyvalue" [value]="currency.key">{{ currency.key
+          }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Converted Amount</mat-label>
+      <input matInput [(ngModel)]="convertedAmount" (ngModelChange)="onConvertedAmountChange()" />
+    </mat-form-field>
+
+  </div>
 </div>
-
-<mat-form-field appearance="outline">
-  <mat-label>To Currency</mat-label>
-  <mat-select [(ngModel)]="toCurrency" (ngModelChange)="onAmountChange()">
-    <!-- Populate options based on available currencies -->
-    <mat-option *ngFor="let currency of exchangeRates.rates | keyvalue" [value]="currency.key">{{ currency.key
-      }}</mat-option>
-  </mat-select>
-</mat-form-field>
-
-<!-- Additional input field to display and edit the converted amount -->
-<mat-form-field appearance="outline">
-  <mat-label>Converted Amount</mat-label>
-  <input matInput [(ngModel)]="convertedAmount" (ngModelChange)="onConvertedAmountChange()" />
-</mat-form-field>

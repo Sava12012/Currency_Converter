@@ -1,13 +1,7 @@
 <mat-toolbar color="primary">
-  <span>My Angular Material Header</span>
-
+  <span>Currency Converter</span>
   <span class="fill-space"></span>
-  <!-- Add this class to push content to the right -->
-
-  <button mat-icon-button aria-label="Example icon button">
-    <mat-icon>search</mat-icon>
-  </button>
-  <button mat-icon-button aria-label="Example icon button">
-    <mat-icon>notifications</mat-icon>
-  </button>
+  <app-clock />
+  <span>USD: {{ currencyRates.rates.USD | number:'1.2-2' }}</span> <!-- Виводимо курс USD -->
+  <span>EUR: {{ currencyRates.rates.EUR | number:'1.2-2' }}</span> <!-- Виводимо курс EUR -->
 </mat-toolbar>

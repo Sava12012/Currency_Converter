@@ -13,9 +13,10 @@ import { CurrencyConverterComponent } from './currency-converter/currency-conver
 import { HeaderComponent } from './header/header.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { AppClockComponent } from './clock/app-clock.component';
 
 @NgModule({
-  declarations: [AppComponent, CurrencyConverterComponent, HeaderComponent],
+  declarations: [AppComponent, CurrencyConverterComponent, HeaderComponent, AppClockComponent],
   imports: [
     BrowserModule,
     FormsModule,

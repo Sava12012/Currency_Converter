@@ -1,0 +1,26 @@
+.clock {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hours,
+.minutes,
+.seconds {
+  margin-right: 5px;
+}
+
+.colon {
+  margin-right: 5px;
+  color: #999;
+  animation: blinker 3s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}

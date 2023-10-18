@@ -1,0 +1,16 @@
+.converterWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.fromWrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+.currencyWrapper {
+  display: flex;
+  gap: 1rem;
+}

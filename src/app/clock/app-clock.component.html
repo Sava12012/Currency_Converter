@@ -1,0 +1,7 @@
+<div class="clock">
+    <span class="hours">{{ hours }}</span>
+    <span class="colon" [ngClass]="{'hide-colon': !showColon}">:</span>
+    <span class="minutes">{{ minutes }}</span>
+    <span class="colon" [ngClass]="{'hide-colon': !showColon}">:</span>
+    <span class="seconds">{{ seconds }}</span>
+</div>
